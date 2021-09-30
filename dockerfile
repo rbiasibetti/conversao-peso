@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS build
 WORKDIR /src
 COPY ["ConversaoPeso.Web/ConversaoPeso.Web.csproj", "ConversaoPeso.Web/"]
 RUN dotnet restore "ConversaoPeso.Web/ConversaoPeso.Web.csproj"
